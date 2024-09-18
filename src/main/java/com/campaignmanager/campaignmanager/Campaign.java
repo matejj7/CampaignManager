@@ -1,9 +1,6 @@
 package com.campaignmanager.campaignmanager;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -30,6 +27,10 @@ public class Campaign {
     private Double radius;
     @NotNull
     private Double campaignFund;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
 
 }
