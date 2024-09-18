@@ -22,19 +22,14 @@ public class CampaignService {
         if(user.getEmeraldFunds() < campaignDetails.getCampaignFund()){
             throw new InsufficientFundsException("Not enough Emerald Funds");
         }
-        // Odejmij kwotę kampanii od konta użytkownika
         user.setEmeraldFunds(user.getEmeraldFunds() - campaignDetails.getCampaignFund());
 
-        // Przypisz użytkownika do kampanii
         campaignDetails.setUser(user);
 
-        // Zaktualizuj konto użytkownika
         userRepository.save(user);
 
-        // Zapisz kampanię w bazie
         campaignRepository.save(campaignDetails);
 
-        // Zwróć zaktualizowaną kampanię
         return campaignDetails;
     }
     public List<Campaign> getCampaigns(){

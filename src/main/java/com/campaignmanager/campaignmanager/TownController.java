@@ -15,7 +15,7 @@ public class TownController {
 
     @GetMapping
     public List<String> getTowns() {
-        // Pre-populated lista miast
+        // Pre-populated towns list
         return Arrays.asList("Warszawa", "Kraków", "Wrocław", "Poznań", "Gdańsk", "Szczecin");
     }
 }
