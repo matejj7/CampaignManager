@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://campaign-manager-frontend-501e228fc453.herokuapp.com")
 @RequestMapping("/api/towns")
 public class TownController {
 
