@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://campaign-manager-frontend-501e228fc453.herokuapp.com")
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
