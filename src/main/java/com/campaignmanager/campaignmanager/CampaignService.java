@@ -25,6 +25,9 @@ public class CampaignService {
         // Odejmij kwotę kampanii od konta użytkownika
         user.setEmeraldFunds(user.getEmeraldFunds() - campaignDetails.getCampaignFund());
 
+        // Przypisz użytkownika do kampanii
+        campaignDetails.setUser(user);
+
         // Zaktualizuj konto użytkownika
         userRepository.save(user);
 
